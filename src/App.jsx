@@ -15,27 +15,30 @@ const App = () => {
       
       {/* Array Return */}
       <div>
-        <h3>Our Cats</h3>
+        <h3>Array Return - Demo</h3>
         <DemoReturnArray />
       </div>
       
       {/* String Return */}
       <div>
+        <h3>String Return - Demo</h3>
         <DemoReturnString />
       </div>
       
       {/* Number Return */}
       <div>
+        <h3>Number Return - Demo</h3>
         <DemoReturnNumber />
       </div>
 
       {/* React Portal - Demo */}
       {ReactDOM.createPortal(
-        <div>Test from inside the Portal!</div>,
+        <h3>Portal Demo</h3>,
         document.getElementById('portal-demo')
       )}
 
       {/* Returning Null - Demo */}
+      <h3>Null Return - Demo</h3>
       <div>
         <button onClick={()=>{setShowCat(true)}}>Show Cat</button>
         <button onClick={()=>{setShowCat(false)}}>Hide Cat</button>
