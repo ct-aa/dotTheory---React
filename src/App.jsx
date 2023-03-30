@@ -1,35 +1,53 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import './App.css';
+import ReactDOM from 'react-dom';
+import DemoReturnArray from './DemoReturnArray';
+import DemoReturnString from './DemoReturnString';
+import DemoReturnNumber from './DemoReturnNumber';
+import { useState } from 'react';
+import catImage from './assets/cat.jpeg'
 
-function App() {
-  const [count, setCount] = useState(0)
-
+const App = () => {
+  const [showCat, setShowCat] = useState(false);
+  
   return (
     <div className="App">
+      {/* New Return Types - Demo */}
+      
+      {/* Array Return */}
       <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+        <h3>Our Cats</h3>
+        <DemoReturnArray />
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
+      
+      {/* String Return */}
+      <div>
+        <DemoReturnString />
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      
+      {/* Number Return */}
+      <div>
+        <DemoReturnNumber />
+      </div>
+
+      {/* React Portal - Demo */}
+      {ReactDOM.createPortal(
+        <div>Test from inside the Portal!</div>,
+        document.getElementById('portal-demo')
+      )}
+
+      {/* Returning Null - Demo */}
+      <div>
+        <button onClick={()=>{setShowCat(true)}}>Show Cat</button>
+        <button onClick={()=>{setShowCat(false)}}>Hide Cat</button>
+      </div>
+      {/* Instead of conditional statement returning null, we can check if the showCat is not equal to false or null */}
+      {showCat && (
+        <div>
+          <img src={catImage} alt="Cat Image" />
+        </div>
+      )}
     </div>
   )
 }
 
-export default App
+export default App;
