@@ -1,3 +1,3 @@
-const DemoReturnNumber = () =>  2023;
+const DemoReturnNumber = () => 2023;
 
 export default DemoReturnNumber;
