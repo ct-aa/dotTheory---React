@@ -4,6 +4,8 @@
 }
 
 .user {
+  display: block;
   font-size: 24px;
+  margin-bottom: 15px;
   color: #05445e;
 }

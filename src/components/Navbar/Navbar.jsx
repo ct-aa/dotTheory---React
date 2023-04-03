@@ -15,7 +15,10 @@ const Navbar = () => {
           <Link to="/what-is-new-in-react">What's New in React</Link>
         </li>
         <li>
-          <Link to="data-fetching-in-react">Data Fetching in React</Link>
+          <Link to="/data-fetching-in-react">Data Fetching in React</Link>
+        </li>
+        <li>
+          <Link to="/redirect-demo">Redirect Demo</Link>
         </li>
       </ul>
     </nav>
