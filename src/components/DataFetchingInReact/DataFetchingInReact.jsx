@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import "./DataFetchingInReact.css";
 
 const DataFetchingInReact = () => {
-  const [users, setUsers] = useState(null);
+  const [users, setUsers] = useState([]);
 
   useEffect(() => {
     fetch("https://jsonplaceholder.typicode.com/users")
@@ -19,6 +19,7 @@ const DataFetchingInReact = () => {
       <h1 className="headline">Data Fetching in React</h1>
       <div className="demo-block">
         {users &&
+          users.length > 0 &&
           users.map((user) => (
             <p className="user" key={user.id}>
               {user.name}
