@@ -1,56 +1,28 @@
-import './App.css';
-import ReactDOM from 'react-dom';
-import DemoReturnArray from './DemoReturnArray';
-import DemoReturnString from './DemoReturnString';
-import DemoReturnNumber from './DemoReturnNumber';
-import { useState } from 'react';
-import catImage from './assets/cat.jpeg'
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import WhatIsNewInReact from "./components/WhatIsNewInReact/WhatIsNewInReact";
+import DataFetchingInReact from "./components/DataFetchingInReact/DataFetchingInReact";
+import Navbar from "./components/Navbar/Navbar";
 
 const App = () => {
-  const [showCat, setShowCat] = useState(false);
-  
   return (
-    <div className="App">
-      {/* New Return Types - Demo */}
-      
-      {/* Array Return */}
-      <div>
-        <h3>Array Return - Demo</h3>
-        <DemoReturnArray />
-      </div>
-      
-      {/* String Return */}
-      <div>
-        <h3>String Return - Demo</h3>
-        <DemoReturnString />
-      </div>
-      
-      {/* Number Return */}
-      <div>
-        <h3>Number Return - Demo</h3>
-        <DemoReturnNumber />
-      </div>
-
-      {/* React Portal - Demo */}
-      {ReactDOM.createPortal(
-        <h3>Portal Demo</h3>,
-        document.getElementById('portal-demo')
-      )}
-
-      {/* Returning Null - Demo */}
-      <h3>Null Return - Demo</h3>
-      <div>
-        <button onClick={()=>{setShowCat(true)}}>Show Cat</button>
-        <button onClick={()=>{setShowCat(false)}}>Hide Cat</button>
-      </div>
-      {/* Instead of conditional statement returning null, we can check if the showCat is not equal to false or null */}
-      {showCat && (
+    <Router>
+      <div className="App">
+        <Navbar />
         <div>
-          <img src={catImage} alt="Cat Image" />
+          <Routes>
+            <Route
+              path="/what-is-new-in-react"
+              element={<WhatIsNewInReact />}
+            ></Route>
+            <Route
+              path="/data-fetching-in-react"
+              element={<DataFetchingInReact />}
+            ></Route>
+          </Routes>
         </div>
-      )}
-    </div>
-  )
-}
+      </div>
+    </Router>
+  );
+};
 
 export default App;
