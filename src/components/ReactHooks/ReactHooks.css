@@ -1,0 +1,21 @@
+.container {
+  background-color: #d4f1f4;
+  padding: 20px;
+  font-size: 20px;
+}
+
+.container-night-mode {
+  background-color: #05445e;
+  color: #fff;
+  padding: 20px;
+  font-size: 20px;
+  border-radius: 5px;
+}
+
+.night-mode-status {
+  padding: 20px;
+  font-size: 20px;
+  background-color: #fff;
+  width: max-content;
+  border-radius: 5px;
+}

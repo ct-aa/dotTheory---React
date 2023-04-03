@@ -20,6 +20,9 @@ const Navbar = () => {
         <li>
           <Link to="/redirect-demo">Redirect Demo</Link>
         </li>
+        <li>
+          <Link to="/react-hooks">React Hooks</Link>
+        </li>
       </ul>
     </nav>
   );
