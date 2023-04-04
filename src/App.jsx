@@ -28,7 +28,7 @@ const App = () => {
 
   return (
     <NightModeContext.Provider value={isNightMode}>
-      <Router>
+      <Router basename="/dotTheory---React">
         <div className="App">
           <div className="night-mode-button-container">
             <button className="night-mode-button" onClick={toggleIsNightMode}>
