@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import "./DataFetchingInReact.css";
+import { Link } from "react-router-dom";
 
 const DataFetchingInReact = () => {
   const [users, setUsers] = useState([]);
@@ -21,9 +22,9 @@ const DataFetchingInReact = () => {
         {users &&
           users.length > 0 &&
           users.map((user) => (
-            <p className="user" key={user.id}>
+            <Link to={`/user/${user.name}`} className="user" key={user.id}>
               {user.name}
-            </p>
+            </Link>
           ))}
       </div>
     </div>

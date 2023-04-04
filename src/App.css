@@ -1,0 +1,14 @@
+.night-mode-button-container {
+  background-color: #05445e;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.night-mode-button {
+  background-color: #d4f1f4;
+  border: none;
+  padding: 10px;
+  font-size: 18px;
+}
