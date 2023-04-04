@@ -1,6 +1,6 @@
 import { useContext, useEffect, useState } from "react";
 import { NightModeContext } from "../../App";
-import sampleText from "../constants/SampleText";
+import sampleText from "../../constants/SampleText";
 import "./ReactHooks.css";
 
 const ReactHooks = () => {
