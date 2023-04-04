@@ -1,6 +1,7 @@
 {
   "name": "dot-theory-react",
   "private": true,
+  "homepage": "https://ct-aa.github.io/dotTheory---React",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
