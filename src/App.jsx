@@ -12,6 +12,7 @@ import UserDetails from "./components/DataFetchingInReact/subComponents/UserDeta
 import NotFound from "./components/NotFound/NotFound";
 import { useState, createContext } from "react";
 import ReactHooks from "./components/ReactHooks/ReactHooks";
+import RSVP from "./components/RSVP/RSVP";
 import "./App.css";
 
 export const NightModeContext = createContext();
@@ -28,7 +29,7 @@ const App = () => {
 
   return (
     <NightModeContext.Provider value={isNightMode}>
-      <Router>
+      <Router basename="/dotTheory---React">
         <div className="App">
           <div className="night-mode-button-container">
             <button className="night-mode-button" onClick={toggleIsNightMode}>
@@ -53,6 +54,7 @@ const App = () => {
               <Route path="/react-hooks" element={<ReactHooks />} />
               {/* Dynamic Routes - Demo */}
               <Route path="/user/:name" element={<UserDetails />} />
+              <Route path="/rsvp" element={<RSVP />} />
               {/* Catch All Route - Demo */}
               <Route path="*" element={<NotFound />} />
             </Routes>

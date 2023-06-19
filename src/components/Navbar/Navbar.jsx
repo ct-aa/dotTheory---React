@@ -23,6 +23,9 @@ const Navbar = () => {
         <li>
           <Link to="/react-hooks">React Hooks</Link>
         </li>
+        <li>
+          <Link to="/rsvp">RSVP App</Link>
+        </li>
       </ul>
     </nav>
   );
