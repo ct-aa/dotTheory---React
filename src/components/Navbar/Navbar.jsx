@@ -23,6 +23,9 @@ const Navbar = () => {
         <li>
           <Link to="/react-hooks">React Hooks</Link>
         </li>
+        <li>
+          <Link to="/redux">Redux</Link>
+        </li>
       </ul>
     </nav>
   );
