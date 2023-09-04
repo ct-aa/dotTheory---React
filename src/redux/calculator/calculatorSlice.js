@@ -1,5 +1,11 @@
 import { createSlice } from "@reduxjs/toolkit";
 
+// Constants for operation types
+export const ADDITION = 'addition';
+export const SUBTRACTION = 'subtraction';
+export const MULTIPLICATION = 'multiplication';
+export const DIVISION = 'division';
+
 const initialState = {
   total: 0
 };
@@ -9,14 +15,25 @@ export const calculatorSlice = createSlice({
   initialState,
   reducers: {
     calculate: (state, action) => {
-      if (action.payload.operation === "addition") {
-        state.total = action.payload.firstNumber + action.payload.secondNumber;
-      } else if (action.payload.operation === "subtraction") {
-        state.total = action.payload.firstNumber - action.payload.secondNumber;
-      } else if (action.payload.operation === "multiplication") {
-        state.total = action.payload.firstNumber * action.payload.secondNumber;
-      } else if (action.payload.operation === "division") {
-        state.total = action.payload.firstNumber / action.payload.secondNumber;
+      const firstNumber = action.payload.firstNumber;
+      const secondNumber = action.payload.secondNumber;
+      const operation = action.payload.operation;
+
+      switch (operation) {
+        case ADDITION:
+          state.total = firstNumber + secondNumber;
+          break;
+        case SUBTRACTION:
+          state.total = firstNumber - secondNumber;
+          break;
+        case MULTIPLICATION:
+          state.total = firstNumber * secondNumber;
+          break;
+        case DIVISION:
+          state.total = firstNumber / secondNumber;
+          break;
+        default:
+          state.total = 'error';
       }
     },
   }
