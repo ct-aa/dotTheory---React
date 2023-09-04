@@ -12,6 +12,7 @@ import UserDetails from "./components/DataFetchingInReact/subComponents/UserDeta
 import NotFound from "./components/NotFound/NotFound";
 import { useState, createContext } from "react";
 import ReactHooks from "./components/ReactHooks/ReactHooks";
+import Redux from "./components/Redux/Redux";
 import "./App.css";
 
 export const NightModeContext = createContext();
@@ -51,6 +52,7 @@ const App = () => {
               {/* Navigate(Redirect) Route - Demo */}
               <Route path="/redirect-demo" element={<Navigate to="/" />} />
               <Route path="/react-hooks" element={<ReactHooks />} />
+              <Route path="/redux" element={<Redux />} />
               {/* Dynamic Routes - Demo */}
               <Route path="/user/:name" element={<UserDetails />} />
               {/* Catch All Route - Demo */}
